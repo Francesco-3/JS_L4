@@ -7,6 +7,21 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const checkArray = function(arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 5) {
+      console.log(arr[i] + ' è maggiore di 5');
+      sum += arr[i];
+    } else {
+      console.log(arr[i] + ' NON è maggiore di 5');
+    }
+  }
+
+  return sum;
+  return "EPICODE " + str;
+}; console.log(checkArray("EPICODE")); // Output: "EPICODE"
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
