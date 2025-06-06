@@ -7,21 +7,26 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const checkArray = function(arr) {
-  let sum = 0;
-
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 5) {
-      console.log(arr[i] + ' è maggiore di 5');
-      sum += arr[i];
-    } else {
-      console.log(arr[i] + ' NON è maggiore di 5');
+const giveMeRandom = function(length) {
+    const arr = [];
+    for (let i = 0; i < length; i++) {
+        arr.push(Math.floor(Math.random() * 10));
     }
-  }
-
-  return sum;
-  return "EPICODE " + str;
-}; console.log(checkArray("EPICODE")); // Output: "EPICODE"
+    return arr;
+}
+const checkArray = function(arr = giveMeRandom(10)) {
+    let sum = 0;
+    arr.forEach(num => {
+        if (num > 5) {
+            console.log(`${num} è maggiore di 5`);
+            sum += num;
+        } else {
+            console.log(`${num} non è maggiore di 5`);
+        }
+    });
+    return sum;
+}
+console.log(checkArray()); // Output: Somma dei valori maggiori di 5
 
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
